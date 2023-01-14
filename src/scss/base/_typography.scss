@@ -1,0 +1,43 @@
+@use '../utilities/' as *;
+
+/* TYPOGRAPHY RESET */
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: var(--clr-neutral-300);
+}
+
+h1, 
+h2,
+h3, 
+h4, 
+h5,
+h6,
+.heading {
+    font-weight: 700;
+    color: var(--clr-neutral-400);
+}
+
+.heading-light {
+    font-weight: 700;
+    color: var(--clr-neutral-100);
+}
+
+p, 
+h1, 
+h2,
+h3, 
+h4, 
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a, a:focus, a:visited {
+    text-decoration: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
