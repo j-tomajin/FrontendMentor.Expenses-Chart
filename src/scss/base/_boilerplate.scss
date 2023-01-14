@@ -1,3 +1,4 @@
+@use '../utilities/' as *;
 /* BOILERPLATE */
 
 /* Set core root defaults */
@@ -40,7 +41,11 @@ body {
     line-height: 1.5;
     min-height: 100%;
     margin: 0;
-    padding: 0;
+    // for this project only
+    padding: {
+        block: clampf(80, 640, 100);
+        inline: 0;
+    };
     background-color: var(--clr-neutral-200);
 
     display: flex;
