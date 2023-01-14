@@ -7,6 +7,8 @@ const  data = {
     datasets: [{
         label: 'Daily Expense',
         data: dataExpense,
+        borderRadius: 8,
+        borderSkipped: false,
         backgroundColor: [
             'hsl(10, 79%, 65%)',
             'hsl(10, 79%, 65%)',
