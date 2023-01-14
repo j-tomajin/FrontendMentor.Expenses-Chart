@@ -1,0 +1,50 @@
+@use '../utilities/' as *;
+
+.attribution { 
+    @extend %border-radius;
+    font-size: clampf(12, 640, 16);  
+    padding: rem(16);
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-neutral-400);
+
+    position: fixed;
+    top: rem(24);
+    right: rem(16);
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: rem(-24);
+        z-index: -1;
+        
+        border-top: 50px solid var(--clr-primary-cyan);
+        border-left: 50px solid transparent;
+    }
+}
+
+.attribution a { 
+    color: var(--clr-neutral-100); 
+    font-weight: bold;
+
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin-inline: auto;
+        background-color: var(--clr-neutral-100);
+        width: 0;
+        height: 2px;
+
+        transition: width .3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
