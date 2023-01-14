@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Expenses chart component</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/dist/style.css">
+  <!-- JAVASCRIPT -->
+  <script src="./src/js/app.js" defer></script>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main>
+    <div class="balance balance--display">
+      <div class="balance__head heading">
+        My Balance
+        <div class="balance__remaining heading-light">
+          $921.48
+        </div>
+      </div>
+      <div class="balance__img">
+        <img src="./src/assets/images/logo.svg" alt="">
+      </div>
+    </div>  
+
+    <div class="chart">
+      <h1 class="chart__head">
+        Spending - Last 7 days
+      </h1>
+      <div class="chart__box">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="line"></div>
+      <div class="expense">
+        <div class="expense__total">
+          Total this month
+          <div class="total heading">
+            $478.33
+          </div>
+        </div>
+        <div class="expense__last">
+          <div class="heading percent">+2.4%</div>
+          <div class="last">
+            from last month
+          </div>
+        </div>
+      </div>
+    </div>  
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/j-tomajin">Jeck</a>.
+  </div> 
+</body>
+</html>
