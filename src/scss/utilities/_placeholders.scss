@@ -1,0 +1,11 @@
+// %
+@use 'breakpoints' as *;
+@use 'functions' as *;
+
+%border-radius {
+    border-radius: rem(12);
+}
+
+%padding {
+    padding: clampf(16, 640, 24);
+}
