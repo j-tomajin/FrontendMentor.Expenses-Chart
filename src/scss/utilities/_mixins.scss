@@ -1,0 +1,11 @@
+@use 'functions';
+
+// text style
+@mixin text-style($color, $ff) {
+    color: $color;
+    font-family: $ff;
+
+    @if $ff == 'montserrat' {
+        font-weight: 400;
+    }
+}
