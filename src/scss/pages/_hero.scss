@@ -1,0 +1,69 @@
+@use '../utilities/' as *;
+
+main {
+    width: min(calc(100% - 3rem), rem(540));
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clampf(16, 640, 24);
+}
+
+.balance {
+    @extend %border-radius;
+    @extend %padding;
+    background-color: var(--clr-primary-red);
+    
+    &--display {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__head {
+        font-size: clampf(16, 640, 18);
+        color: var(--clr-neutral-100);
+        font-weight: 400;
+    }
+    &__remaining {
+        font-size: clampf(24, 640, 32);
+    }
+}
+
+.line {
+    border-top: 1px solid var(--clr-neutral-200);
+    margin-block: clampf(24, 640, 38);
+}
+
+.chart {
+    @extend %border-radius;
+    @extend %padding;
+    background-color: var(--clr-neutral-100);
+
+    &__head {
+        font-size: clampf(24, 640, 36);
+        margin-bottom: clampf(16, 640, 24);
+    }
+
+    .expense {
+        display: flex;
+        justify-content: space-between;
+
+        &__total {
+            font-size: clampf(12, 640, 14);
+        }
+        .total {
+            font-size: clampf(24, 640, 32);
+            margin: 0;
+            line-height: 1;
+        }
+
+        &__last {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            .percent {
+                margin-left: auto;
+            }
+        }
+    }
+}
